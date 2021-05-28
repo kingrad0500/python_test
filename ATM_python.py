@@ -23,7 +23,7 @@ while chances >= 0:
             option = int(input("What would you like to choose?: "))
             if option == 1:
                 print('Your balance is Rs', balance, '\n')
-                restart = input("Would you like to go back?: ")
+                restart = input("Would you like to go back? (Y/N): ")
                 if restart in ('n', 'NO', 'no', 'N'):
                     print("Thank You!")
                     break
@@ -31,11 +31,11 @@ while chances >= 0:
             elif option == 2:
                 option2 = 'y'
                 withdrawl = float(
-                    input('How much Would you like to withdraw?\nRs10/Rs20/Rs40/Rs60/Rs80/Rs100 for other enter 1: '))
+                    input('How much Would you like to withdraw?\n$10/$20/$40/$60/$80/$100 for other enter 1: '))
                 if withdrawl in [10, 20, 40, 60, 80, 100]:
                     balance = balance - withdrawl
                     print("Your balance is now: ", balance)
-                    restart = input("Would you like to go back?: ")
+                    restart = input("Would you like to go back?(Y/N): ")
                     if restart in ('n', 'NO', 'no', 'N'):
                         print("Thank you!")
                         break
@@ -48,8 +48,8 @@ while chances >= 0:
             elif option == 3:
                 Pay_in = float(input("How much would you like to pay in?: "))
                 balance = balance + Pay_in
-                print('\nYour Balance is now Rs ', balance)
-                restart = input("Would you like to go back?: ")
+                print('\nYour Balance is now $', balance)
+                restart = input("Would you like to go back? (Y/N): ")
                 if restart in ('n', 'NO', 'no', 'N'):
                     print("Thank you!")
                     break
